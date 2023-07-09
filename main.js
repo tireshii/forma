@@ -1,5 +1,4 @@
 let form = document.getElementById("form")
-addEventListener('submit', (event) => {});
 onsubmit = (event) => {
     //really dont like this 
     let nomer = document.getElementById("nomer")
@@ -8,11 +7,14 @@ onsubmit = (event) => {
     let cost = document.getElementById("cost")
     let cent = document.getElementById("cent")
     let coef = document.getElementById("coef")
+    console.log(nomer)
     event.preventDefault()
     const post = async () => {
         const response = await fetch( ``, {
             method: `POST`,
-            headers ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 input_title: nomer.value,
                 input_data: date.value,
@@ -26,4 +28,5 @@ onsubmit = (event) => {
         if(data.succes){
         }
     }
+    post()
 }
