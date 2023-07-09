@@ -1,4 +1,3 @@
-console.log("ты долбаеб")
 let form = document.getElementById("form")
 addEventListener('submit', (event) => {});
 onsubmit = (event) => {
@@ -32,7 +31,6 @@ onsubmit = (event) => {
         })
         const data = await response.json()
         if(data.succes){
-            console.log("Пошел нахуй")
         }
     }
 }
