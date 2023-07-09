@@ -8,19 +8,18 @@ onsubmit = (event) => {
     let cost = document.getElementById("cost")
     let cent = document.getElementById("cent")
     let coef = document.getElementById("coef")
-    
     event.preventDefault()
     const post = async () => {
         const response = await fetch( ``, {
             method: `POST`,
             headers ,
             body: JSON.stringify({
-                input_title: nomer,
-                input_data: date,
-                input_pred: name,
-                input_cost: cost,
-                input_cent: cent,
-                input_cost_coef: coef
+                input_title: nomer.value,
+                input_data: date.value,
+                input_pred: name.value,
+                input_cost: cost.value,
+                input_cent: cent.value,
+                input_cost_coef: coef.value
             })
         })
         const data = await response.json()
@@ -28,7 +27,3 @@ onsubmit = (event) => {
         }
     }
 }
-/*Мох! Стать похожим меньше на цветок, больше на
-Мох! Японский сад промок, воду пьёт зелёный мох
-Неприметным ковром стелется в тени цветов, репней и пестиков, шипов
-Мы все исчезнем, но не мох*/ 
