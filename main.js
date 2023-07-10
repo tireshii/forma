@@ -7,7 +7,6 @@ onsubmit = async (event) => {
     let date  = document.getElementById("date")
     let name  = document.getElementById("name")
     let cost  = document.getElementById("cost")
-    let cent  = document.getElementById("cent")
     let coef  = document.getElementById("coef")
 
     const res = await fetch(`/api`, {
@@ -21,12 +20,11 @@ onsubmit = async (event) => {
             input_data: date.value,
             input_pred: name.value,
             input_cost: cost.value,
-            input_cent: cent.value,
             input_cost_coef: coef.value,
         })
     })
     const data = await res.arrayBuffer();
-
+    
     const blob = new Blob([data], { type: res.headers.get('content-type') });
     const fileUrl = URL.createObjectURL(blob);
     const fileName = res.headers.get('content-disposition').split('filename=')[1].replace(/"/g, '');

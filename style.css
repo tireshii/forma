@@ -14,8 +14,10 @@ body{
     background-color: white;
     border-radius: 5px;
     padding: 20px;
-    background:white url("./img/file-file-type-svgrepo-com.svg") top right no-repeat;
+    background:white url("./img/bloodtrail-emote.png.webp") top right no-repeat;
     background-size: 50%;
+    background-position: right 80px top 40px;
+    box-shadow: #303030 2px 2px 5px;
 }
 .form{
     width: 300px;
