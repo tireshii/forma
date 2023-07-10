@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1aeeb20ed2.js" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
     <title>Form</title>
 </head>
@@ -13,25 +17,29 @@
     <div class="content">
         <div class="form">
             <form id="form">
-                <h3>Договор</h3>
+                <h3>Номер</h3>
                 <input id="nomer" class="input" type="text" placeholder="Введите номер договора" required />
                 <h3>Дата</h3>
                 <input id="date" class="input" type="date" max placeholder="Дата договора" required />
                 <h3>Предприятие</h3>
-                <select id="name" class="input" name="Предприятие" id="name">
+                <select id="name" class="input" name="Предприятие">
                     <option value="ВЭС">ВЭС</option>
                     <option value="СИП">СИП</option>
                 </select>
+                
                 <h3>Стоимость</h3>
                 <input id="cost" class="input" type="number" placeholder="Стоимость работ(Рублей)" required />
                 <input id="cent" class="input" type="number" max=99 placeholder="Стоимость работ(Копеек)" required />
                 <h3>Коэффициент</h3>
                 <input id="coef" class="input" type="number" min=1 step=0.01 max=2 value="1"
                     placeholder="Коэффициент для &quot;СИП&quot; " required />
-                <button class="submit" accesskey="enter">
-                    Получить документ
-                </button>
+                <div class="action">
+                    <button type="button" class="button-18">
+                        <i style="font-size: 12pt; color: white; margin-right: 5px;" class="fa fa-file" aria-hidden="true"></i> Получить документ
+                    </button>
+                </div>
             </form>
         </div>
+        
     </div>
 </body>
